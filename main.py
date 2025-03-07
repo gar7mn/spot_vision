@@ -13,7 +13,7 @@ def main():
     #authenticate with the robot
     token =robot.authenticate(username,password)
     #stream video from spots depth sensors
-    depth_video(robot)
+    depth_video(robot,'frontright')
 
     
     

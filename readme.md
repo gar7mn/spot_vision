@@ -1,7 +1,7 @@
 # Spot Sensor Fusion
 
-### python 3.7+ is required!
-<p>In order for this code to work with spot, you will need at least python 3.7</p>
+### python 3.9+ is required!
+<p>In order for this code to work with spot, you will need at least python 3.9</p>
 
 
 ### setup
@@ -25,3 +25,9 @@ python main.py
 <h1>Example Image</h1>
 
 <img src="frontleft.jpg"></img>
+
+
+### In progress
+    Add error handling for when an invalid sensor named is passed to the depth video function
+
+    Get the rotation of the image correct

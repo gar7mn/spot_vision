@@ -12,7 +12,6 @@ from scipy import ndimage
 import numpy as np
 import cv2
 import time
-from PIL import ImageSequence
 import io
 import sys
 import logging
@@ -74,8 +73,7 @@ def image_to_opencv(image,auto_rotate=True):
 
 
 def depth_to_opencv(image, auto_rotate=True):
-    print(type(image))
-    print('pl')
+    
     extension = '.png'
     dtype = np.uint16
     # print(type(image[0]))
@@ -112,9 +110,17 @@ def depth_to_opencv(image, auto_rotate=True):
 
 
 
-def depth_video(robot: Robot):
-    """Capture video from Spot's depth sensors and overlay it with the regular camera"""
-    sources = ['frontleft_depth_in_visual_frame', 'frontleft_fisheye_image']
+def depth_video(robot: Robot,cam:str='frontleft'):
+    """Capture video from Spot's depth sensors and overlay it with the regular camera.
+    
+    robot:
+        Authenticated robot object that represents the spot robot.
+    
+    cam: 
+        either frontleft,frontright,left or right if None it will choose frontleft"""
+    #will use the frontleft sensors by default
+    
+    sources = [cam+'_depth_in_visual_frame', cam+'_fisheye_image']
     image_client = robot.ensure_client(ImageClient.default_service_name)
     requests = [build_image_request(source, 100) for source in sources]
 
