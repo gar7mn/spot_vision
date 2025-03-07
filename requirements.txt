@@ -1,0 +1,7 @@
+numpy=>2.0.0
+bosdyn-client =>4.0.0
+bosdyn-mission=>4.0.0 
+bosdyn-choreography-client=>4.0.0
+bosdyn-orbit=>4.0.0
+opencv-python==4.10.0
+scipy==1.13.1
