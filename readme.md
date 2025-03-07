@@ -13,4 +13,4 @@ pip install -r requirements.txt
 
 <h1>Example Image</h1>
 
-<img href="frontleft.jpg"></img>
+<img src="frontleft.jpg"></img>
