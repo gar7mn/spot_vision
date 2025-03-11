@@ -27,7 +27,12 @@ python main.py
 <img src="frontleft.jpg"></img>
 
 
-### In progress
-    Add error handling for when an invalid sensor named is passed to the depth video function
+<h5>What you are looking at</h5>
+<p>Boston Dynamics spot Robots come with both Rehular Image cameras, RGB ones on newer models and single channel ones on older ones, as well as Depth cameras. What this program essentially does is take the video from both the regular camera of your choice and its adjacent depth camera and fuse the data from both of them so that the depth imagery is overlaid on top of the visual image. This is what we call sensor fusion.</p>
 
-    Get the rotation of the image correct
+### In progress
+
+
+<p>Add error handling for when an invalid sensor named is passed to the depth video function</p>
+
+<p>Get the rotation of the image correct</p>

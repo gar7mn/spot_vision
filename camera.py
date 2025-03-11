@@ -73,7 +73,6 @@ def image_to_opencv(image,auto_rotate=True):
 
 
 def depth_to_opencv(image, auto_rotate=True):
-    
     extension = '.png'
     dtype = np.uint16
     # print(type(image[0]))
@@ -100,12 +99,13 @@ def depth_to_opencv(image, auto_rotate=True):
     out = cv2.addWeighted(visual_rgb, 0.4, depth_color, 0.6, 0)
 
     # Rotate image if needed
-    if auto_rotate:
-        if image[0].source.name == 'front':
-            out = cv2.rotate(out, cv2.ROTATE_90_CLOCKWISE)
-        elif image[0].source.name == 'right':
-            out = cv2.rotate(out, cv2.ROTATE_180)
-    print('pl3')
+    # if auto_rotate:
+    #     if image[0].source.name == 'front':
+    #         out = ndimage.rotate(out,ROTATION_ANGLE[image.source.name])
+    #         # out = cv2.rotate(out, cv2.ROTATE_90_CLOCKWISE)
+    #     elif image[0].source.name == 'right':
+    #         out = ndimage.rotate(out,ROTATION_ANGLE[image.source.name])
+    #         out = cv2.rotate(out,cv2.ROTATE_90_COUNTERCLOCKWISE)
     return out, extension
 
 

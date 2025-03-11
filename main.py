@@ -5,15 +5,16 @@ import bosdyn
 import bosdyn.client
 def main():
     #add spots username and password to authenticate with the robot
-    username = ''
-    password = ''
-    address = ''
+    username = 'user2'
+    password = 'simplepassword'
+    address = '128.206.42.100'
     sdk = bosdyn.client.create_standard_sdk('client')
     robot = sdk.create_robot(address)
     #authenticate with the robot
     token =robot.authenticate(username,password)
     #stream video from spots depth sensors
     depth_video(robot,'frontright')
+    
 
     
     
