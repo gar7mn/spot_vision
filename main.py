@@ -5,9 +5,9 @@ import bosdyn
 import bosdyn.client
 def main():
     #add spots username and password to authenticate with the robot
-    username = 'user2'
-    password = 'simplepassword'
-    address = '128.206.42.100'
+    username = ''
+    password = ''
+    address = ''
     sdk = bosdyn.client.create_standard_sdk('client')
     robot = sdk.create_robot(address)
     #authenticate with the robot
